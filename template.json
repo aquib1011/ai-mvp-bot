@@ -1,0 +1,37 @@
+{
+  "name": "nextjs-mvp-template",
+  "description": "A starter MVP template for generating Next.js web apps using Tailwind CSS and API routes.",
+  "stack": "nextjs",
+  "version": "1.0.0",
+  "instructions": [
+    "1. Replace placeholder texts and components with AI-generated ones based on user input.",
+    "2. Add dynamic routes, pages, or API endpoints as described in the prompt.",
+    "3. Update package.json metadata and dependencies as needed."
+  ],
+  "files": [
+    {
+      "path": "package.json",
+      "content": "{\n  \"name\": \"nextjs-mvp\",\n  \"version\": \"1.0.0\",\n  \"private\": true,\n  \"scripts\": {\n    \"dev\": \"next dev\",\n    \"build\": \"next build\",\n    \"start\": \"next start\"\n  },\n  \"dependencies\": {\n    \"next\": \"latest\",\n    \"react\": \"latest\",\n    \"react-dom\": \"latest\",\n    \"tailwindcss\": \"^3.4.1\"\n  }\n}"
+    },
+    {
+      "path": "tailwind.config.js",
+      "content": "module.exports = {\n  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],\n  theme: { extend: {} },\n  plugins: []\n};"
+    },
+    {
+      "path": "pages/index.tsx",
+      "content": "import Head from 'next/head';\n\nexport default function Home() {\n  return (\n    <div className='min-h-screen flex flex-col items-center justify-center bg-gray-50'>\n      <Head>\n        <title>MVP Template</title>\n      </Head>\n      <main className='p-8 text-center'>\n        <h1 className='text-4xl font-bold mb-4'>🚀 MVP Template Ready</h1>\n        <p className='text-gray-600'>Edit this page to start building your AI-generated MVP!</p>\n      </main>\n    </div>\n  );\n}"
+    },
+    {
+      "path": "pages/api/hello.ts",
+      "content": "import type { NextApiRequest, NextApiResponse } from 'next';\n\nexport default function handler(req: NextApiRequest, res: NextApiResponse) {\n  res.status(200).json({ message: 'Hello from your MVP API!' });\n}"
+    },
+    {
+      "path": "styles/globals.css",
+      "content": "@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\nbody { @apply bg-white text-gray-800; }"
+    },
+    {
+      "path": "README.md",
+      "content": "# Next.js MVP Template\\n\\nThis is a minimal Next.js + Tailwind starter used by the AI automation to scaffold MVPs dynamically.\\n\\n## Features\\n- Next.js 14\\n- Tailwind CSS\\n- Example API route (`/api/hello`)\\n- Clean layout ready for AI code injection\\n\\n---\\n\\n### How to use manually\\n\\n```bash\nnpm install\nnpm run dev\n```\n\\nThen visit [http://localhost:3000](http://localhost:3000)"
+    }
+  ]
+}
